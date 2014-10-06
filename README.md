@@ -1,16 +1,11 @@
 # PassportPayments API SDK For .Net
-
 The repository contains the PassportPayments SDK ASP.NET VB Class Library (PassportPayments.dll) and the PassportPaymentsDemo Sample ASP.NET VB Web Application.
 
-
-
 ## Requirements
-
-
-VisualStudio 2013 or later
+ * Sign up for a PassportPayments Merchant account at [passportpayments.com](https://passportpayments.com)
+ * VisualStudio 2013 or later
 
 ## Setup
-
 ### Download
 Obtain the latest version of the PassportPayments .Net bindings at:
 
@@ -19,7 +14,6 @@ git clone https://github.com/passportpayments/dotnet
 ```
 
 ### Adding lib 
-
 To add PassportPayments.dll to your project
 
 * In Solution Explorer, select your Web project.
@@ -43,9 +37,9 @@ Simple usage looks like:
 ppWrapper = New PassportPayments.Wrapper(clientId, clientSecret)
 Dim apiResponse As GetCustomersResponse = ppWrapper.getCustomers()
 If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
-  'Do Something
+  'Do Something with apiResponse.getData()
  Else
-    respData = New PError(apiResponse.getError())
+    Dim respData = New PError(apiResponse.getError())
     Me.responseText.Text = respData.getErrorObject().ToString()
 End If
 
