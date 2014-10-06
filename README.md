@@ -27,7 +27,7 @@ To add PassportPayments.dll to your project
 Simple usage looks like:
 
 ```aspx-vb
-  Dim ppWrapper = New PassportPayments.Wrapper("8L7yO98Ooz", "8e9R66fwzlYS8E74")
+  Dim ppWrapper = New PassportPayments.Wrapper(CLIENT_ID, CLIENT_SECRET)
   Dim apiResponse As GetCustomersResponse = ppWrapper.getCustomers()
   If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
       'Do Something with apiResponse.getData()
