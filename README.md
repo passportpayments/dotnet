@@ -13,17 +13,20 @@ Obtain the latest version of the PassportPayments .Net bindings at:
 git clone https://github.com/passportpayments/dotnet
 ```
 
-### Adding lib 
-To add PassportPayments.dll to your project
+### Referencing the wrapper 
+Dependent library references: PassportPayments.dll, Newtonsoft.Json.dll
 
 * In Solution Explorer, select your Web project.
 * On the Website menu (for Web site projects) or the Project menu (for Web application projects), choose Add Reference. Alternatively, you can right-click the name of your Web project in Solution Explorer and then select Add Reference.
 * The Add Reference dialog box is displayed.
 * Select the Browse tab.
-* Browse to the folder that you just cloned and select PassportPayments.dll under libs folder, and then click OK.
+* Browse to the folder that you just cloned and select the dll files under libs folder, and then click OK.
 * Adding a reference in this way ensures that all file dependencies (debug files, XML document files, and so on) are copied.
 
 ## Getting Started
+Namespaces: 
+PassportPayments.Wrapper
+
 Simple usage looks like:
 
 ```aspx-vb
