@@ -27,14 +27,15 @@ To add PassportPayments.dll to your project
 Simple usage looks like:
 
 ```aspx-vb
-ppWrapper = New PassportPayments.Wrapper(clientId, clientSecret)
-Dim apiResponse As GetCustomersResponse = ppWrapper.getCustomers()
-If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
-  'Do Something with apiResponse.getData()
- Else
-    Dim respData = New PError(apiResponse.getError())
-    Me.responseText.Text = respData.getErrorObject().ToString()
-End If
+  Dim ppWrapper = New PassportPayments.Wrapper("8L7yO98Ooz", "8e9R66fwzlYS8E74")
+  Dim apiResponse As GetCustomersResponse = ppWrapper.getCustomers()
+  If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
+      'Do Something with apiResponse.getData()
+      Me.Label1.Text = apiResponse.getData().ToString()
+  Else
+      Dim respData = New PError(apiResponse.getError())
+      Me.Label1.Text = respData.getErrorObject().ToString()
+  End If
 
 ```
 
