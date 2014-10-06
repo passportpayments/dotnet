@@ -1,0 +1,581 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PassportPaymentsDemo
+</name>
+</assembly>
+<members>
+<member name="F:PassportPaymentsDemo.Charge.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.customersList">
+	<summary>
+customersList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.cardsList">
+	<summary>
+cardsList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.amount">
+	<summary>
+amount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.chargeCustomer">
+	<summary>
+chargeCustomer control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Charge.responseText">
+	<summary>
+responseText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.index.cardtoken">
+	<summary>
+cardtoken control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:PassportPaymentsDemo.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:PassportPaymentsDemo.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:PassportPaymentsDemo.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:PassportPaymentsDemo.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:PassportPaymentsDemo.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:PassportPaymentsDemo.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.ccnumber">
+	<summary>
+ccnumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.expmonth">
+	<summary>
+expmonth control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.expyear">
+	<summary>
+expyear control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.cvv">
+	<summary>
+cvv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.lblError">
+	<summary>
+lblError control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.CreateCardToken.lblcardToken">
+	<summary>
+lblcardToken control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.customersList">
+	<summary>
+customersList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.customersListResponse">
+	<summary>
+customersListResponse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.customersListDropDown">
+	<summary>
+customersListDropDown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.cardsListDropdown">
+	<summary>
+cardsListDropdown control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.amount">
+	<summary>
+amount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.chargeCustomer">
+	<summary>
+chargeCustomer control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.chargeResponselbl">
+	<summary>
+chargeResponselbl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.transactionResponselbl">
+	<summary>
+transactionResponselbl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Customers.transactionsList">
+	<summary>
+transactionsList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.ccnumber">
+	<summary>
+ccnumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.expmonth">
+	<summary>
+expmonth control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.expyear">
+	<summary>
+expyear control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.cvv">
+	<summary>
+cvv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.amount">
+	<summary>
+amount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.lblError">
+	<summary>
+lblError control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.cardtoken">
+	<summary>
+cardtoken control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.lblcardToken">
+	<summary>
+lblcardToken control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.charge">
+	<summary>
+charge control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.Checkout.responseText">
+	<summary>
+responseText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.ccnumber">
+	<summary>
+ccnumber control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.expmonth">
+	<summary>
+expmonth control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.expyear">
+	<summary>
+expyear control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.cvv">
+	<summary>
+cvv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label8">
+	<summary>
+Label8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.emailaddress">
+	<summary>
+emailaddress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.fisrtname">
+	<summary>
+fisrtname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label9">
+	<summary>
+Label9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.lastname">
+	<summary>
+lastname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.cardtoken">
+	<summary>
+cardtoken control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.lblcardToken">
+	<summary>
+lblcardToken control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.save">
+	<summary>
+save control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaratioresponseText">
+	<summary>
+responseText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:PassportPaymentsDemo.SaveCustomer.ccnumber">
+	<summary>
+ccnumber control.
+</summary>
+	<remarks>
+Auto-generated 
