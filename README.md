@@ -54,3 +54,6 @@ To run the test application:
 ```
 * Enter F9
 * This should load the app in your default browser
+
+Note: The sample app uses [JS Client Lib](https://github.com/passportpayments/js) You can use any of PassportPayments' client librares for your app
+
