@@ -24,7 +24,7 @@ To add PassportPayments.dll to your project
 
 * Select the Browse tab.
 
-* Browse to the folder that contains the assembly you want to reference, select the assembly, and then click OK.
+* Browse to the folder that you just cloned and select PassportPayments.dll, and then click OK.
 
 * Adding a reference in this way ensures that all file dependencies (debug files, XML document files, and so on) are copied.
 
