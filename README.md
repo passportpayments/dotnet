@@ -45,6 +45,7 @@ Please see [PassportPayments API docs](https://api.passportpayments.com/docs/) f
 To run the test application:
 * open Visual Studio
 * File > Open > Project/Solution
+* Browse to the folder that you just cloned and select PassportPayments.sln
 * Open AppConfig.vb, Fill in your **client_id** and **client_secret** provided 
 ```
     Const CLIENT_ID = "xxxx"
