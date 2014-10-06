@@ -48,9 +48,14 @@ To run the test application:
 * File > Open > Project/Solution
 * Browse to the folder that you just cloned and select PassportPayments.sln
 * Open AppConfig.vb, Fill in your **client_id** and **client_secret** provided 
+
 ```
     Const CLIENT_ID = "xxxx"
     Const CLIENT_SECRET = "yyyyyyyy"
+```
+* Open Scripts/config.js, add your appKey provided
+```js
+   var APP_KEY = "APP_KEY";
 ```
 * Enter F9
 * This should load the app in your default browser
