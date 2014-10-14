@@ -19,7 +19,7 @@ Dependent library references: Newtonsoft.Json.dll
 * right click on your solution (dont do the project, do the solution)
 * select 'Manage Nuget Packages for Solution'
 * click 'online', in the search box type 'newtonsoft'
-*click 'Install' on 'Json.NET' (probably, what your looking for might be in another package, I'll ask you to track it down).
+* click 'Install' on 'Json.NET' (probably, what your looking for might be in another package, I'll ask you to track it down).
 
 Now add the PassportPayments wrapper refernce:
 
