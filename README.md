@@ -14,13 +14,20 @@ git clone https://github.com/passportpayments/dotnet
 ```
 
 ### Referencing the wrapper 
-Dependent library references: PassportPayments.dll, Newtonsoft.Json.dll
+Dependent library references: Newtonsoft.Json.dll
+
+* right click on your solution (dont do the project, do the solution)
+* select 'Manage Nuget Packages for Solution'
+* click 'online', in the search box type 'newtonsoft'
+*click 'Install' on 'Json.NET' (probably, what your looking for might be in another package, I'll ask you to track it down).
+
+Now add the PassportPayments wrapper refernce:
 
 * In Solution Explorer, select your Web project.
 * On the Website menu (for Web site projects) or the Project menu (for Web application projects), choose Add Reference. Alternatively, you can right-click the name of your Web project in Solution Explorer and then select Add Reference.
 * The Add Reference dialog box is displayed.
 * Select the Browse tab.
-* Browse to the folder that you just cloned and select the dll files under libs folder, and then click OK.
+* Browse to the folder that you just cloned and select the PassportPayments.dll under libs folder, and then click OK.
 * Adding a reference in this way ensures that all file dependencies (debug files, XML document files, and so on) are copied.
 
 ## Getting Started
@@ -46,10 +53,19 @@ Simple usage looks like:
 Please see [PassportPayments API docs](https://api.passportpayments.com/docs/) for up-to-date documentation.
 
 ## Tests
-To run the test application:
+###Pre-requisites
+
+* Visual Studio 2013 (.NET Framework 4.5) or higher Or
+* Visual Studio 2012 (.NET Framework 4.5) or higher
+
+### Please note: bin and obj folders
+Please delete the bin and obj folders before switching between different versions of Visual Studio
+
+### Loading the app
 * open Visual Studio
 * File > Open > Project/Solution
 * Browse to the folder that you just cloned and select PassportPayments.sln
+* Add libs reference
 * Open AppConfig.vb, Fill in your **client_id** and **client_secret** provided 
 
 ```
