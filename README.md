@@ -18,6 +18,7 @@ Dependent library references: Newtonsoft.Json.dll
 
 * right click on your solution (dont do the project, do the solution)
 * select 'Manage Nuget Packages for Solution'
+* If you see JSON.Net in the installed packages list, skip the next two steps.
 * click 'online', in the search box type 'newtonsoft'
 * click 'Install' on 'Json.NET' (probably, what your looking for might be in another package, I'll ask you to track it down).
 
@@ -37,20 +38,19 @@ PassportPayments.Wrapper
 Simple usage looks like:
 
 ```aspx-vb
-  Dim ppWrapper = New PassportPayments.Wrapper(CLIENT_ID, CLIENT_SECRET)
+  Dim ppWrapper = New PassportPayments.Wrapper(CLIENT_ID, CLIENT_SECRET, API_URL)
   Dim apiResponse As GetCustomersResponse = ppWrapper.getCustomers()
   If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
       'Do Something with apiResponse.getData()
       Me.Label1.Text = apiResponse.getData().ToString()
   Else
-      Dim respData = New PError(apiResponse.getError())
-      Me.Label1.Text = respData.getErrorObject().ToString()
+      Me.Label1.Text = apiResponse.getError()
   End If
 
 ```
 
 ## Documentation
-Please see [PassportPayments API docs](https://api.passportpayments.com/docs/) for up-to-date documentation.
+Please see [PassportPayments API docs](https://api.passportpayments.com/docs/?vb#) for up-to-date documentation.
 
 ## Tests
 ###Pre-requisites
@@ -66,15 +66,17 @@ Please delete the bin and obj folders before switching between different version
 * File > Open > Project/Solution
 * Browse to the folder that you just cloned and select PassportPayments.sln
 * Add libs reference
-* Open AppConfig.vb, Fill in your **client_id** and **client_secret** provided 
+* Open AppConfig.vb, Fill in your **client Id**, **client Secret**, **apiUrl** provided 
 
 ```
-    Const CLIENT_ID = "xxxx"
-    Const CLIENT_SECRET = "yyyyyyyy"
+  Const API_URL = "https://sandbox.passportpayments.com/"
+  Const CLIENT_ID = "xxxx"
+  Const CLIENT_SECRET = "yyyyyyyy"
 ```
 * Open Scripts/config.js, add your appKey provided
 ```js
-   var APP_KEY = "APP_KEY";
+  var API_END_POINT = "https://sandbox.passportpayments.com/";
+  var APP_KEY = "APP_KEY";
 ```
 * Enter F9
 * This should load the app in your default browser
