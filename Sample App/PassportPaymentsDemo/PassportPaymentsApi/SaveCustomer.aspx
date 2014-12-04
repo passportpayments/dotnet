@@ -38,7 +38,7 @@
                 showError("cardToken API error: '" + responseText + "'");
             }
             $("#save").click(function(){
-                var pp = new PassportCardToken(APP_KEY); // YOUR APPKEY
+                var pp = new PassportCardToken(APP_KEY, API_END_POINT); // YOUR APPKEY
                 var params = {
                     "cardnumber": $("#ccnumber").val().trim(),
                     "expmonth": $("#expmonth").val(),
@@ -61,7 +61,7 @@
 <body>
     <form runat="server">
         <h2>PassportPayments SDK - API Samples</h2>
-        <h3>Checkout</h3>
+        <h3>Save Customer</h3>
         <div>
             <table>
                 <tr>
@@ -112,7 +112,7 @@
         </div>
         <asp:TextBox ID="cardtoken" runat="server"></asp:TextBox>
         <asp:Label ID="lblcardToken" runat="server" Text="" Style="font-weight: bold"></asp:Label><br />
-        <input type="button"  id="save" value="Save Customer" runat="server" />
+        <input type="button"  id="save" value="Save Customer with card" runat="server" />
         <asp:Button ID="save1"  OnClick="saveCustomerClick" runat="server" />
         <br />
         <br />

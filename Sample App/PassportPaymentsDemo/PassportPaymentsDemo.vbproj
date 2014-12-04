@@ -40,11 +40,11 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PassportPayments\PassportPayments\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPayments">
+    <Reference Include="PassportPayments, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PassportPayments\PassportPayments\bin\Debug\PassportPayments.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -94,7 +94,9 @@
     <Content Include="PassportPaymentsApi\CreateCardToken.aspx" />
     <Content Include="index.aspx" />
     <Content Include="PassportPaymentsApi\Customers.aspx" />
+    <Content Include="PassportPaymentsApi\Products.aspx" />
     <Content Include="PassportPaymentsApi\SaveCustomer.aspx" />
+    <Content Include="PassportPaymentsApi\UpdateCustomer.aspx" />
     <Content Include="Scripts\config.js" />
     <Content Include="Styles\sdk.css" />
     <Content Include="Web.config" />
@@ -155,11 +157,25 @@
       <DependentUpon>Customers.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PassportPaymentsApi\Products.aspx.designer.vb">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PassportPaymentsApi\Products.aspx.vb">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PassportPaymentsApi\SaveCustomer.aspx.designer.vb">
       <DependentUpon>SaveCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="PassportPaymentsApi\SaveCustomer.aspx.vb">
       <DependentUpon>SaveCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PassportPaymentsApi\UpdateCustomer.aspx.designer.vb">
+      <DependentUpon>UpdateCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PassportPaymentsApi\UpdateCustomer.aspx.vb">
+      <DependentUpon>UpdateCustomer.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
@@ -181,6 +197,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

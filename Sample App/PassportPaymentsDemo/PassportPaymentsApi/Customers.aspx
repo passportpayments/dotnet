@@ -13,7 +13,7 @@
         <div>
             <h3>Customers List</h3>
 
-            <asp:GridView ID="customersList" runat="server" AutoGenerateColumns="true"></asp:GridView>
+            <asp:GridView ID="customersList1" runat="server" AutoGenerateColumns="true"></asp:GridView>
 
             <br />
             <br />

@@ -34,7 +34,7 @@
                 showError("cardToken API error: '" + responseText + "'");
             }
             $("#getCardToken").click(function () {
-                var pp = new PassportCardToken(APP_KEY); // YOUR APPKEY
+                var pp = new PassportCardToken(APP_KEY, API_END_POINT); // YOUR APPKEY
                 var params = {
                     "cardnumber": $("#ccnumber").val().trim(),
                     "expmonth": $("#expmonth").val(),

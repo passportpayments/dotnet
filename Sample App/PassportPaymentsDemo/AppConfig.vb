@@ -1,7 +1,8 @@
 ﻿Public Class AppConfig
     Structure Credentials
-        Const CLIENT_ID = "YOUR_CLIENT_ID"
-        Const CLIENT_SECRET = "YOUR_CLIENT_SECRET"
+        Const API_URL = "https://sandbox.passportpayments.com"
+        Const CLIENT_ID = "6lFMYqNugL"
+        Const CLIENT_SECRET = "7b62160cb5b49cea3349362426c619b3"
     End Structure
 
 End Class

@@ -16,15 +16,15 @@ Public Class Customers
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If (Not IsPostBack) Then
             Try
-                ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET)
+                ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET, AppConfig.Credentials.API_URL)
                 apiResponse = ppWrapper.getCustomers()
                 If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
                     Dim customers As New List(Of PCustomer)
                     customers = apiResponse.getData()
                     Session("customers") = customers
                     'load the gridview
-                    customersList.DataSource = customers
-                    customersList.DataBind()
+                    customersList1.DataSource = customers
+                    customersList1.DataBind()
 
                     'populate the dropdown
                     For Each customer As PCustomer In customers
@@ -38,15 +38,13 @@ Public Class Customers
                     'load Transactions for a customer
                     loadTransactions()
                 Else
-                    respData = New PError(apiResponse.getError())
-                    Me.customersListResponse.Text = respData.getErrorObject().ToString()
+                    Me.customersListResponse.Text = apiResponse.getError()
                 End If
             Catch ex As Exception
                 Debug.WriteLine("exception " + ex.ToString())
             End Try
         End If
     End Sub
-
 
     Protected Sub customersListDropDownChange(sender As Object, e As EventArgs) Handles customersListDropDown.SelectedIndexChanged
         loadCards()
@@ -59,7 +57,7 @@ Public Class Customers
 
     Protected Sub chargeClick(sender As Object, e As EventArgs) Handles chargeCustomer.Click
         Try
-            ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET)
+            ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET, AppConfig.Credentials.API_URL)
             chargeResponse = ppWrapper.captureByCardId(cardsListDropdown.SelectedItem.Value, amount.Text)
             If (chargeResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
                 respData = New PCharge(chargeResponse.getData())
@@ -100,7 +98,7 @@ Public Class Customers
 
     Protected Sub loadTransactions()
         Try
-            ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET)
+            ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET, AppConfig.Credentials.API_URL)
             transactionsResponse = ppWrapper.getTransactionsByCustomerId(customersListDropDown.SelectedItem.Value)
             If (transactionsResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
                 Dim transactions As New List(Of PTransaction)
@@ -113,11 +111,9 @@ Public Class Customers
                 transactionResponselbl.Visible = False
             Else
                 transactionsList.Visible = False
-                respData = New PError(transactionsResponse.getError())
                 transactionResponselbl.Visible = True
-                transactionResponselbl.Text = respData.getErrorObject().ToString()
+                transactionResponselbl.Text = transactionsResponse.getError()
             End If
-            'transactionResponselbl.Text = 
         Catch ex As Exception
             Debug.WriteLine("exception " + ex.ToString())
         End Try
@@ -129,14 +125,13 @@ Public Class Customers
             Dim row As GridViewRow = transactionsList.Rows(index)
             Dim selectedTransactionId = transactionsList.Rows(index).Cells(1).Text
             Try
-                ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET)
+                ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET, AppConfig.Credentials.API_URL)
                 voidRefundResponse = ppWrapper.refundTransaction(selectedTransactionId)
                 If (voidRefundResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
                     loadTransactions()
                 Else
-                    respData = New PError(transactionsResponse.getError())
                     transactionResponselbl.Visible = True
-                    transactionResponselbl.Text = respData.getErrorObject().ToString()
+                    transactionResponselbl.Text = voidRefundResponse.getError()
                 End If
                 'transactionResponselbl.Text = 
             Catch ex As Exception

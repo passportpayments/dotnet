@@ -43,7 +43,19 @@
                         </div>
                         <ul>
                             <li><a href="PassportPaymentsApi/SaveCustomer.aspx">Save Cutsomer</a></li>
+                            <li><a href="PassportPaymentsApi/UpdateCustomer.aspx">Update Cutsomer</a></li>
                             <li><a href="PassportPaymentsApi/Customers.aspx">Cutsomers</a></li>
+                        </ul>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td>
+                        <div class="section_header">
+                            Products
+                        </div>
+                        <ul>
+                            <li><a href="PassportPaymentsApi/Products.aspx">List Products</a></li>
                         </ul>
                     </td>
                 </tr>

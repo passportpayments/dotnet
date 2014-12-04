@@ -14,7 +14,7 @@ Public Class Charge
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If (Not IsPostBack) Then
             Try
-                ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET)
+                ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET, AppConfig.Credentials.API_URL)
                 apiResponse = ppWrapper.getCustomers()
                 If (apiResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
                     customersList.Items.Clear()
@@ -26,8 +26,7 @@ Public Class Charge
                     Next
                     loadCards()
                 Else
-                    respData = New PError(apiResponse.getError())
-                    Me.responseText.Text = respData.getErrorObject().ToString()
+                    Me.responseText.Text = apiResponse.getError()
                 End If
             Catch ex As Exception
                 Debug.WriteLine("exception " + ex.ToString())
@@ -45,14 +44,13 @@ Public Class Charge
 
     Protected Sub chargeClick(sender As Object, e As EventArgs) Handles chargeCustomer.Click
         Try
-            ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET)
+            ppWrapper = New PassportPayments.Wrapper(AppConfig.Credentials.CLIENT_ID, AppConfig.Credentials.CLIENT_SECRET, AppConfig.Credentials.API_URL)
             chargeResponse = ppWrapper.captureByCardId(cardsList.SelectedItem.Value, amount.Text)
             If (chargeResponse.getResponseType() = PResponseStatus.RESPONSE_STATUS_SUCCESS) Then
                 respData = New PCharge(chargeResponse.getData())
                 Me.responseText.Text = respData.getChargeObject().ToString()
             Else
-                respData = New PError(apiResponse.getError())
-                Me.responseText.Text = respData.getErrorObject().ToString()
+                Me.responseText.Text = apiResponse.getError()
             End If
         Catch ex As Exception
             Debug.WriteLine("exception " + ex.ToString())
